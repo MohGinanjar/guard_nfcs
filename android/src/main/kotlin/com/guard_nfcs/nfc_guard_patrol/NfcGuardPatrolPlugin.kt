@@ -113,18 +113,4 @@ class NfcGuardPatrolPlugin: FlutterPlugin, MethodCallHandler {
   override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
     channel.setMethodCallHandler(null)
   }
-
-  override fun onAttachedToActivity(binding: ActivityPluginBinding) {
-    activity = binding.activity
-  }
-
-  override fun onDetachedFromActivityForConfigChanges() {
-  }
-
-  override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
-    activity = binding.activity
-  }
-
-  override fun onDetachedFromActivity() {
-  }
 }
