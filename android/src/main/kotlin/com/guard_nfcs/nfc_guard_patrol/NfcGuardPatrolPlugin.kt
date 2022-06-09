@@ -28,10 +28,10 @@ class NfcGuardPatrolPlugin: FlutterPlugin, MethodCallHandler {
   ///
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
   /// when the Flutter Engine is detached from the Activity
-  private var channel : MethodChannel
-  private var activity: Activity
+  private lateinit var channel : MethodChannel
+  private lateinit var activity: Activity
   private var mNfcAdapter: NfcAdapter? = null
-  private var mifareClassic: MifareClassic
+  private lateinit var mifareClassic: MifareClassic
   private val flag = NfcAdapter.FLAG_READER_NFC_A
 
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
@@ -113,4 +113,5 @@ class NfcGuardPatrolPlugin: FlutterPlugin, MethodCallHandler {
   override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
     channel.setMethodCallHandler(null)
   }
+
 }
