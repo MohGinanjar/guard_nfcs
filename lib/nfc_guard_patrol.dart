@@ -1,4 +1,4 @@
-library nfc_guard_patrol;
+library guard_nfcs;
 import 'dart:async';
 
 import 'package:flutter/services.dart';
